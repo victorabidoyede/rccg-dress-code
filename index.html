@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCCG Church Dress Code Guide - Sunday Best Attire</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f7f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background: #1a252f;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-brand {
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 15px 0;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2px;
+            flex-wrap: nowrap;
+            margin: 0;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 12px;
+            display: block;
+            transition: background 0.3s ease;
+            font-size: 0.88em;
+            white-space: nowrap;
+        }
+
+        .nav-links li a:hover {
+            background: #2c3e50;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: white;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .key-takeaways {
+            background: #ecf0f1;
+            padding: 25px;
+            border-left: 5px solid #3498db;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .key-takeaways ul {
+            list-style-position: inside;
+            margin-left: 10px;
+        }
+
+        .key-takeaways li {
+            margin: 10px 0;
+        }
+
+        .guidelines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .guideline-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .guideline-card h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .rccg-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .tips-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .tip-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .tip-box h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .tip-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .tip-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .tip-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .emphasis-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        .faq-item h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .tips-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 25px;
+                margin: 20px auto;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: #1a252f;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links li a {
+                padding: 15px 20px;
+                border-bottom: 1px solid #2c3e50;
+            }
+
+            nav .container {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            nav {
+                display: none;
+            }
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .section {
+                box-shadow: none;
+                page-break-inside: avoid;
+                margin: 20px 0;
+                padding: 20px 0;
+            }
+
+            header {
+                background: white;
+                color: black;
+                box-shadow: none;
+                border-bottom: 2px solid black;
+            }
+
+            h2 {
+                color: black;
+                border-bottom: 2px solid black;
+            }
+
+            h3, h4 {
+                color: black;
+            }
+
+            .key-takeaways, .rccg-section, .emphasis-box, .faq-item, .guideline-card, .tip-box {
+                background: white;
+                border: 1px solid #ccc;
+            }
+
+            footer {
+                background: white;
+                color: black;
+                border-top: 2px solid black;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+
+            .guidelines-grid, .tips-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-brand">RCCG Church Dress Code Guide</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#takeaways">Key Takeaways</a></li>
+                <li><a href="#rccg">RCCG Guidelines</a></li>
+                <li><a href="#importance">Importance</a></li>
+                <li><a href="#appropriate">Appropriate Clothing</a></li>
+                <li><a href="#women">Women's Tips</a></li>
+                <li><a href="#men">Men's Tips</a></li>
+                <li><a href="#final">Final Thoughts</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>RCCG Church Dress Code Guide</h1>
+            <p>Understanding Sunday Best Attire for Men and Women</p>
+            <p style="margin-top: 10px; font-size: 1em; opacity: 0.85;">The Redeemed Christian Church of God</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="section" id="takeaways">
+            <h2>Key Takeaways</h2>
+            <div class="key-takeaways">
+                <ul>
+                    <li>Dress respectfully for church to show honor to God and the sacred space.</li>
+                    <li>Choose modest, comfortable clothing that reflects personal style without being flashy or revealing.</li>
+                    <li>For women, knee - length dresses or skirts with layers and accessories work well.</li>
+                    <li>Men should wear dress shirts and slacks with suitable shoes.</li>
+                    <li>Remember the importance of dressing up is not just about looks but embodying Christ's virtues like humility and compassion.</li>
+                    <li>Dress according to your faith while also respecting the cultural norms of your church community.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="rccg">
+            <h2>RCCG Church Dress Code</h2>
+            <div class="rccg-section">
+                <p><strong>The Redeemed Christian Church of God (RCCG)</strong> generally advocates for modest, decent, and respectful attire, emphasizing that clothing should not be distracting or overly revealing. While policies may vary slightly by local parish, the focus is on holiness and modesty, particularly for church workers and during officiated services.</p>
+                
+                <h3>Key Dress Code Guidelines:</h3>
+                
+                <p><strong>Modesty & Decency:</strong> The overarching principle is to dress in a manner that reflects Christian values, avoiding flashy or revealing clothing.</p>
+                
+                <p><strong>Women's Attire:</strong> Conservative, knee-length or longer dresses and skirts are encouraged. Blouses should not be too revealing.</p>
+                
+                <p><strong>Men's Attire:</strong> Typically business casual to formal, such as dress shirts, trousers, and suits.</p>
+                
+                <div class="emphasis-box">
+                    <h4>Strict Restrictions for Ministers/Workers:</h4>
+                    <ul>
+                        <li>General Overseer Pastor E.A. Adeboye has restricted male pastors from wearing braided hair.</li>
+                        <li>Female ministers and workers are advised against heavy makeup, jewelry, and artificial eyelashes or nails.</li>
+                    </ul>
+                </div>
+                
+                <p><strong>Weddings:</strong> Wedding dresses are expected to be modest, covering the shoulders and not revealing.</p>
+                
+                <p><strong>General Recommendations:</strong> It is always recommended to check with the specific local RCCG parish, as some may have more rigid standards for workers or during special events. The goal is to focus on worship, not fashion, ensuring the attire is respectful of the sacred space.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>What to Wear to Church on Sunday: Dress Code Guide for Men and Women</h2>
+            
+            <p>Deciding what to wear on Sunday morning can be surprisingly tricky. While dress codes for church have evolved, the idea of presenting oneself respectfully remains. This article will guide you through choosing appropriate attire that honors both personal style and tradition.</p>
+        </div>
+
+        <div class="section" id="importance">
+            <h2>Understanding the Importance of Dressing for Church</h2>
+            
+            <p>Dressing for church is not just about looking good, it's about showing respect for God and the sacred space. It also sets a positive example for others in the congregation and demonstrates reverence for the spiritual environment.</p>
+            
+            <h3>Respect for God and the church</h3>
+            
+            <p>Wearing your Sunday best to church is a sign of honor for God and the institution. Putting on neat dress pants or a tasteful sweater reflects the solemnity of the mass. It says, 'This place and time are special.' Back in historical times, especially in the south, clothing was also about social order. On Sundays, even slaves weren't made to work as it was seen as sinful—which shows how deep respect for worship days goes.</p>
+            
+            <p>Choosing what to wear sends a message beyond fashion—it's about values and reverence. A button-down shirt isn't just cloth; it's an act of worship when worn during holy days or while singing Psalms like Psalm 22 with your choir. Keep this sacred setting in mind as you select garments that uphold dignity without distraction. This is how you embody respect through attire: by embracing timeless traditions shared by countless generations before us.</p>
+            
+            <h3>Setting a good example for others</h3>
+            
+            <p>Dress well for church and you show others respect for the sacred space. Your choice in clothing sets a standard. It tells the young and new members that we honor God with our best. Think of Clark Kent; he changes into Superman to meet the moment's needs. Likewise, choose outfits that reflect your role as a choir member or churchgoer.</p>
+            
+            <p>Your appearance at Mass can inspire kindness and humility in others, just like Paul wrote about in Colossians 3:12-17. We "clothe" ourselves not just with fabric but with compassion too. This approach influences those around us to focus on inner qualities beyond Sunday's attire.</p>
+            
+            <h3>Showing reverence for the sacred space</h3>
+            
+            <p>Your clothes speak respect for the sacred space of the church. Think of it as dressing not just for God, but also honoring the house where people gather to worship. It's about more than looking good; it's showing care for a place that holds hope, love, and spiritual community. Like Colossians 3:12 says, clothe yourself with virtues like kindness and humility—your outfit can reflect these inner qualities.</p>
+            
+            <p>Wearing attire that suits a holy setting shows you value the experience and traditions of your faith. Keep in mind how our ancestors viewed Sundays as special days deserving special clothes. The reverence you bring to church isn't only in your heart or voiced in prayer; it's also woven into what you choose to wear each Sunday. Your clothing can mirror the incarnation of Jesus – humble yet dignified – offering an example that inspires others as they come together for masses or partake in the Eucharist.</p>
+        </div>
+
+        <div class="section" id="appropriate">
+            <h2>Appropriate Clothing for Church</h2>
+            
+            <p>When choosing clothing for church, it's important to consider modesty, comfort, and the appropriateness of your attire for the occasion. Dressing in a respectful and mindful manner demonstrates reverence for the sacred space and sets a positive example for others.</p>
+            
+            <h3>Modesty</h3>
+            
+            <p>Modesty in church attire means choosing clothing that is not revealing or overly flashy. This shows respect for the sacred space and sets a good example for others, creating an atmosphere of reverence. Dressing modestly also aligns with cultural norms and emphasizes the internal qualities valued within religious practice, rather than focusing solely on outward appearance. By embracing modesty in your attire, you can honor the purpose of attending church and demonstrate humility before God.</p>
+            
+            <p>The concept of dressing modestly for church dates back to historical enforcement during times of social hierarchy control, which emphasized respectful attire over extravagant displays.</p>
+            
+            <h3>Comfort</h3>
+            
+            <p>Dressing for church should prioritize comfort. Traditional clothing, while respectful, can also be comfortable if chosen wisely. Suits and business attire in the South were worn for comfort and respect. Going casual for church allows a more relaxed experience but comfort shouldn't mean sacrificing modesty and reverence. Prioritize covering knees and choosing higher necklines for both men and women to ensure respectfulness.</p>
+            
+            <p>Choosing comfortable attire doesn't mean compromising religious values or traditions; it simply means finding a balance that respects sacred spaces while allowing for a comfortable worship experience without distraction or discomfort.</p>
+            
+            <h3>Dressing for the occasion</h3>
+            
+            <p>When dressing for church, it's important to consider the occasion and dress accordingly. Whether it's a special service, a holiday celebration, or a regular Sunday gathering, your attire should reflect the significance of the event. This means choosing clothing that is appropriate for the specific occasion while still adhering to modesty and respect for the sacred space.</p>
+            
+            <p>Recognizing the importance of dressing for different church occasions allows you to honor traditions and customs while expressing your reverence. Being mindful of this aspect ensures that your attire aligns with the solemnity of certain services or joyous celebrations, creating an atmosphere of unity and respect among fellow worshippers.</p>
+        </div>
+
+        <div class="section" id="women">
+            <h2>Tips for Women's Church Attire</h2>
+            
+            <p>Choose dresses or skirts that are knee-length or longer, and remember to incorporate layers and accessories for a polished look. Ready to elevate your Sunday best? Keep reading for more tips on dressing for church.</p>
+            
+            <h3>Dresses or skirts</h3>
+            
+            <p>Choose dresses or skirts that are modest and respectful for church. Avoid overly revealing or tight clothing. Embrace the opportunity to dress up by utilizing layers and accessories, adding a touch of elegance to your attire. Modesty and comfort should guide your choice of clothing for this sacred occasion, allowing you to show reverence while feeling at ease.</p>
+            
+            <p>Find balance between style and modesty when selecting your outfit, ensuring it aligns with personal convictions while respecting cultural norms. Whether wearing a dress or skirt, let your outfit reflect the solemnity of the occasion without compromising on individual style.</p>
+            
+            <h3>Avoiding revealing or tight clothing</h3>
+            
+            <p>Choose church attire that upholds modesty and respects the sacredness of the space. Select dresses or skirts that fall below the knee for women, ensuring they are not too tight or low-cut. Embrace layers and accessories to add style while maintaining a dignified appearance. For men, opt for dress shirts and slacks that fit well without being overly casual or flashy. Prioritize clothing that allows movement and comfort while avoiding anything too revealing or form-fitting.</p>
+            
+            <p>Remember the roots of Sunday attire and its connection to social hierarchy in history as you make your choices. By dressing with respect and modesty, you honor both the tradition of church attire and show reverence towards God during your time at church services.</p>
+            
+            <h3>Utilizing layers and accessories</h3>
+            
+            <p>Add personality to your church attire by utilizing layers and accessories. Consider adding a stylish duster or cardigan over your outfit for a touch of flair that is both fashionable and respectful. Meaningful jewelry, such as pendants or bracelets, can enhance your overall look while adding a personal touch that reflects your faith. Additionally, incorporating a tasteful belt can help define your waistline and elevate the sophistication of your ensemble.</p>
+            
+            <p>Enhancing your church attire with layers and accessories allows you to express yourself while maintaining reverence for the sacred space. These small additions can make a significant difference in how you present yourself at church, allowing you to embrace the opportunity to dress up for this special occasion without compromising modesty or respect.</p>
+        </div>
+
+        <div class="section" id="men">
+            <h2>Tips for Men's Church Attire</h2>
+            
+            <p>Opt for dress shirts and slacks, avoiding casual or overly flashy clothing. Pay attention to appropriate footwear for the occasion.</p>
+            
+            <h3>Dress shirts and slacks</h3>
+            
+            <p>Men's church attire should be respectful and modest. Opt for dress shirts and slacks that are clean, well-fitted, and in good condition. Avoid flashy or overly casual clothing to show reverence for the sacred space where you worship. Remember the importance of dressing appropriately to honor God and set a positive example for others in your community.</p>
+            
+            <p>Churchgoers have dressed respectfully for centuries, acknowledging the significance of their presence within the church walls. Wearing dress shirts and slacks demonstrates respect not only for God but also for yourself and those around you who share in this spiritual experience with you.</p>
+            
+            <h3>Avoiding casual or overly flashy clothing</h3>
+            
+            <p>Choose modest and comfortable clothing for church. Dress in a respectful and appropriate manner, avoiding flashy or revealing outfits. Men should opt for dress shirts, slacks, and suitable footwear. Similarly, women can choose dresses or skirts while focusing on modesty and avoiding tight or revealing attire. Strive to find the right balance between style and reverence when dressing for church services.</p>
+            
+            <p>Certain churches may have specific dress codes that emphasize formal attire over casual clothing. In some southern regions, men are expected to wear suits while women are encouraged to dress in business-like attire when attending services.</p>
+            
+            <h3>Appropriate footwear</h3>
+            
+            <p>When choosing footwear for church, opt for closed-toe shoes or dressy sandals. Avoid sneakers or flip-flops, and consider the comfort and modesty of your choice. Keeping your footwear polished and well-maintained reflects respect for the sacred space.</p>
+            
+            <p>As you select your Sunday best, remember that appropriate footwear contributes to a reverent atmosphere in the church. Consider practicality and cultural norms when deciding on your shoes for worship services or events.</p>
+        </div>
+
+        <div class="section" id="final">
+            <h2>Final Thoughts and Considerations</h2>
+            
+            <p>When it comes to choosing your Sunday best for church, it's important to remember that personal convictions and cultural norms play a role in determining what is appropriate attire. Finding the balance between style and modesty allows individuals to embrace the opportunity to dress up for church while still showing respect for the sacred space and setting a good example for others.</p>
+            
+            <h3>Dressing according to personal convictions</h3>
+            
+            <p>Dressing for church is a reflection of your personal beliefs and values. It's an expression of your respect and devotion to God. Your attire communicates reverence for the sacred space, embodying virtues important in religious teachings. Remember that modesty and humility are valued above outward appearances when attending church services.</p>
+            
+            <p>Your choice of clothing should align with your faith and be respectful towards cultural norms within the community. Additionally, it can serve as a way to set an example for others regarding reverence and dedication to worship without being ostentatious or overbearing.</p>
+            
+            <h3>Remembering the true purpose of attending church</h3>
+            
+            <p>As we attend church, it's important to remember that our outward appearance is just one aspect of our worship. While dressing respectfully shows reverence for the sacred space, the true purpose of attending church goes beyond what we wear. It's about embodying the virtues of Christ, such as compassion and humility, and showing kindness and meekness to others. Our "Sunday best" should reflect these qualities more than our attire.</p>
+            
+            <p>Embracing the opportunity to dress up for church enables us to showcase respect not only in our clothing but also through our conduct. Ultimately, attending church allows us to come together as a community with shared values and beliefs, united by a common faith rather than solely by how we present ourselves externally.</p>
+            
+            <h3>Being respectful and mindful of cultural norms</h3>
+            
+            <p>Respecting cultural norms and traditions in church attire is crucial. Understanding the significance of dressing appropriately shows reverence for the sacred space and can set a positive example for others. It's essential to find a balance between personal style and modesty while considering the historical context of dressing up for church, especially within different cultural backgrounds, as it reflects respect towards diverse beliefs.</p>
+            
+            <p>Finding this equilibrium can enhance the overall experience of attending church, allowing individuals to express their personal convictions while respecting longstanding customs. Embracing the opportunity to dress up for church showcases an understanding of its importance in various communities and religious practices, contributing to a more inclusive and respectful environment.</p>
+            
+            <h3>Finding the balance between style and modesty</h3>
+            
+            <p>Finding the balance between style and modesty is essential when choosing your church attire. It reflects respect for the sacred space while allowing personal expression. Modesty doesn't mean dull; you can still embrace fashion while maintaining reverence. Consider that the focus of church attire is not just about outward appearance but also about showing respect to God and the community.</p>
+            
+            <p>Embracing modest yet stylish clothing allows you to honor both tradition and personal taste, creating harmony in your church ensemble.</p>
+            
+            <h3>Embracing the opportunity to dress up for church.</h3>
+            
+            <p>Dressing up for church presents a chance to show reverence and respect for the sacred space. It also allows you to set an example for others in your congregation. Embrace this opportunity as a way to honor God and express humility through your attire. Let it be a personal reflection of the solemnity and significance of attending church.</p>
+            
+            <p>Consider that dressing up for church is not about being flashy or ostentatious, but rather about showing sincerity and devotion. It's an occasion to dress modestly yet elegantly, aligning with cultural norms while finding a stylish balance that respects the sanctity of the environment.</p>
+        </div>
+
+        <div class="section">
+            <h2>Conclusion</h2>
+            
+            <p>In conclusion, dressing appropriately for church is essential. It shows respect and reverence for the sacred space while setting a good example for others. Remember to strike a balance between style and modesty, embracing the opportunity to dress up for church according to personal convictions and cultural norms. Always keep in mind the true purpose of attending church and be mindful of your clothing choices.</p>
+        </div>
+
+        <div class="section" id="faqs">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <h4>1. What is the dress code for church?</h4>
+                <p>The dress code for church often means wearing modest and respectful clothing, though it can vary from one congregation to another. You want to wear something that shows you honor the place and occasion.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>2. Is it important what I wear to church?</h4>
+                <p>Yes, because how you dress can reflect your respect for the sacred space and community values. Many believe that presenting yourself well is a form of worship and reverence.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>3. Can I express my personal style when dressing for church?</h4>
+                <p>Certainly! While keeping with the modest tone of church attire, there's room to show your unique fashion sense through color choices or accessories.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>4. Have attitudes about Sunday best changed over time?</h4>
+                <p>They have indeed evolved; long gone are strict rules mandating suits and dresses every Sunday as many congregations now welcome a more relaxed approach while still encouraging an appearance that reflects respect for the sanctuary.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 RCCG Church Dress Code Guide. Honoring God through Respectful Attire.</p>
+            <p style="margin-top: 10px; opacity: 0.8;">The Redeemed Christian Church of God</p>
+            <p style="margin-top: 5px; opacity: 0.8;">Remember: The goal is to focus on worship, not fashion, ensuring the attire is respectful of the sacred space.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('navLinks');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
